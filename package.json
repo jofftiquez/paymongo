@@ -10,8 +10,8 @@
     "test": "jest",
     "lint": "npx eslint src --fix -c .eslintrc",
     "prebuild": "rimraf dist && npm run test",
-    "build": "rollup -c",
-    "build:only": "rollup -c",
+    "build": "rollup -c && tsc",
+    "build:only": "rollup -c && tsc",
     "try": "node tester.js"
   },
   "repository": {
@@ -40,7 +40,8 @@
     "rimraf": "^3.0.2",
     "rollup": "^1.32.1",
     "rollup-plugin-babel": "^4.4.0",
-    "rollup-plugin-uglify": "^6.0.4"
+    "rollup-plugin-uglify": "^6.0.4",
+    "typescript": "^4.3.5"
   },
   "dependencies": {
     "bent": "^7.3.1"
